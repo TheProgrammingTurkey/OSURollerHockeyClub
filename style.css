@@ -1,0 +1,101 @@
+body{
+    text-align: center;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+#navbar{
+    height: 10vh;
+    background-color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+}
+#navbar a,
+#navbar img,
+#navbar div {
+    padding-right: 100px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+#fullScreenContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0;
+}
+#fullScreenLogo{
+    height: 70%;
+}
+#fullScreenArrow{
+    font-size: 70px;
+    cursor: pointer;
+    padding-top: 0px;
+}
+#mainSection{
+    margin-left: 200px;
+    margin-right: 200px;
+    min-height: 90vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+}
+#teamContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.teamLabel{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.player{
+    display: inline-flex;
+    width: 80%;
+    margin: 30px;
+}
+.player img{
+    height: 200px;
+    width: 200px;
+    border: 5px solid #333;
+    border-radius: 10%;
+}
+.playerInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+.playerName{
+    font-size: 24px;
+    font-weight: bold;
+}
+.playerPosition{
+    font-size: 20px;
+}
+.playerBio{
+    font-size: 18px;
+}
+.playerInfo div{
+    padding: 10px;
+}
+#footer{
+    width: 100%;
+    height: 10vh;
+}
