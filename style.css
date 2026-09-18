@@ -77,7 +77,7 @@ body{
     margin: 0;
 }
 #fullScreenLogo{
-    height: 70%;
+    height: min(70%, 50vw);
 }
 #fullScreenArrow{
     font-size: 52px;
@@ -161,7 +161,6 @@ p{
     #fullScreenArrow {
         font-size: 40px;
     }
-
     #fullScreenLogo {
         height: 40vh;
     }
