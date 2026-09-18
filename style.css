@@ -5,6 +5,7 @@ body{
     margin: 0;
     background-color: #f2f2f2;
     font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
 }
 #navbar{
     height: 75px;
@@ -16,14 +17,15 @@ body{
     font-size: 20px;
     text-decoration: none;
     color: white;
+    box-sizing: border-box;
 }
 #navbar a,
-#navbar img,
-#navbar div {
-    padding-right: 100px;
+#navbar img{
+    padding-right: 0;
     text-decoration: none;
     color: white;
     cursor: pointer;
+    margin-right: 100px;
 }
 #navbar a:hover, #navbar button:hover {
     font-weight: bold;
@@ -174,6 +176,17 @@ p{
         margin-left: 50px;
         margin-right: 50px;
     }
+    #navbar{
+        height: 60px;
+        font-size: 15px;
+    }
+    #navbar a,
+    #navbar img{
+        margin-right: 40px;
+    }
+    #dropdown #dropbtn {
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -184,5 +197,13 @@ p{
         font-size: 16px;
         margin-left: 50px;
         margin-right: 50px;
+    }
+    #navbar{
+        height: 50px;
+        font-size: 12px;
+    }
+    #navbar a,
+    #navbar img{
+        margin-right: 20px;
     }
 }
