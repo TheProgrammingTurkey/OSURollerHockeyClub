@@ -25,7 +25,9 @@ body{
     color: white;
     cursor: pointer;
 }
-/* Style the dropdown button to fit inside the topnav */
+#navbar a:hover, #navbar button:hover {
+    font-weight: bold;
+}
 #dropdown #dropbtn {
     font-size: 20px;
     border: none;
@@ -36,8 +38,6 @@ body{
     font-family: inherit;
     margin: 0;
 }
-
-/* Style the dropdown content (hidden by default) */
 #navbar #dropdown-content {
     display: none;
     position: absolute;
@@ -48,8 +48,6 @@ body{
     z-index: 1;
     margin-right: 20px !important;
 }
-
-/* Style the links inside the dropdown */
 #dropdown-content a {
     float: none;
     color: white;
@@ -58,17 +56,12 @@ body{
     display: block;
     text-align: left;
 }
-
-/* Add a grey background to dropdown links on hover */
 #dropdown-content a:hover {
     font-weight: bold;
 }
-
-/* Show the dropdown menu when the user moves the mouse over the dropdown button */
 #dropdown:hover #dropdown-content {
     display: block;
 }
-
 #fullScreenContainer{
     display: flex;
     position: relative;
@@ -78,18 +71,27 @@ body{
     height: calc(100vh - 75px);
     margin: 0;
 }
+#fullScreenContainer h1 {
+    margin: 0;
+}
 #fullScreenLogo{
     height: 70%;
 }
 #fullScreenArrow{
-    font-size: 70px;
+    font-size: 52px;
     cursor: pointer;
-    padding-top: 0px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    display: inline-block;
+    color: #333;
+    transform: translateY(4px);
 }
 .homeScreenImage{
     position: absolute;
     z-index: -1;
-    width: 150px;
+    width: min(12vw, 15vh);
+    max-width: 150px;
     border: 5px solid #333;
     border-radius: 10%;
 }
@@ -107,17 +109,12 @@ p{
     margin-right: 200px;
 }
 #teamContainer{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     width: 100%;
-}
-.teamLabel{
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 60px;
-    margin-bottom: 20px;
 }
 .player{
     display: inline-flex;
@@ -125,7 +122,6 @@ p{
     margin: 30px;
 }
 .player img{
-    height: 200px;
     width: 200px;
     border: 5px solid #333;
     border-radius: 10%;
@@ -133,7 +129,7 @@ p{
 .playerInfo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     padding-left: 20px;
 }
@@ -153,4 +149,40 @@ p{
 #footer{
     width: 100%;
     height: 10vh;
+}
+
+@media (max-height: 500px) {
+    #fullScreenContainer {
+        gap: 6px;
+        padding-top: 8px;
+    }
+    #fullScreenArrow {
+        font-size: 40px;
+    }
+
+    #fullScreenLogo {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 1000px) {
+    h1{
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1{
+        font-size: 18px;
+    }
+    p {
+        font-size: 16px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
 }
