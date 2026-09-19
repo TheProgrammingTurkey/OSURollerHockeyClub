@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Dandinis logo">
+  <rect width="160" height="160" rx="80" fill="#2d2d2d"/>
+  <circle cx="80" cy="80" r="58" fill="#f2f2f2"/>
+  <path d="M52 46h26c21 0 34 12 34 34s-13 34-34 34H52V46zm18 16v36h8c12 0 18-6 18-18s-6-18-18-18h-8z" fill="#2d2d2d"/>
+  <text x="80" y="128" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#2d2d2d" font-weight="700">D</text>
+</svg>
