@@ -22,7 +22,8 @@ body{
     box-sizing: border-box;
 }
 #navbar a,
-#navbar img{
+#navbar img,
+#navbar div{
     padding-right: 0;
     text-decoration: none;
     color: white;
