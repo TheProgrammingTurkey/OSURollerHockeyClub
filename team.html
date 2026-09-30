@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSU Roller Hockey Club | D2 Team</title>
+    <title>OSU Roller Hockey Club | AA Team</title>
     <link rel="icon" type="image/x-icon" href="assets/osuLogo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="loadRoster()">
     <script src="script.js" defer></script>
     <div id="navbar">
         <img onclick="window.location.href=('index.html')" src="assets/osuLogo.png" height="50px">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="history.html">History</a>
-        <div id="dropdown">
+        <a href="team.html">Meet the Team</a>
+        <!-- <div id="dropdown">
             <button id="dropbtn">
                 Meet the Teams <i class="fa fa-caret-down"></i>
             </button>
@@ -23,7 +24,7 @@
                 <a href="d2.html" target="_blank">D2</a>
                 <a href="aa.html" target="_blank">AA</a>
             </div>
-        </div>
+        </div> -->
         <div id="dropdown">
             <button id="dropbtn">
                 Links <i class="fa fa-caret-down"></i>
@@ -37,47 +38,6 @@
     </div>
     <h1>Meet the Team</h1>
     <div id="teamContainer">
-        <div class="player">
-            <div class="playerImage">
-                <img src="https://live.staticflickr.com/65535/52427623641_bf5d16937c_b.jpg">
-            </div>
-            <div class="playerInfo">
-                <div class="playerName">Josh Curtin</div>
-                <div class="playerPosition">Head Coach</div>
-                <div class="playerBio">Home Town: Columbus<br>Grade: 12<br>Major: idk<br>Years with the Team: 25<br>Favorite NHL Team: Blue Jackets<br>Favorite Player: Zach Werenski<br>Subject: Hockey</div>
-            </div>
-        </div>
-        <div class="player">
-            <div class="playerImage">
-                <img src="https://live.staticflickr.com/65535/52427623641_bf5d16937c_b.jpg">
-            </div>
-            <div class="playerInfo">
-                <div class="playerName">Thomas Marriner</div>
-                <div class="playerPosition">Head Coach</div>
-                <div class="playerBio">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus.</div>
-            </div>
-        </div>
-        <div class="player">
-            <div class="playerImage">
-                <img src="https://live.staticflickr.com/65535/52427623641_bf5d16937c_b.jpg">
-            </div>
-            <div class="playerInfo">
-                <div class="playerName">Jack Turk</div>
-                <div class="playerPosition">Defense</div>
-                <div class="playerBio">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus</div>
-            </div>
-        </div>
-        <div class="player">
-            <div class="playerImage">
-                <img src="https://live.staticflickr.com/65535/52427623641_bf5d16937c_b.jpg">
-            </div>
-            <div class="playerInfo">
-                <div class="playerName">Alex Nakamura</div>
-                <div class="playerPosition">Forward</div>
-                <div class="playerBio">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus</div>
-            </div>
-        </div>
-        
     </div>
     <div id="footer">
         <div class="footerSponsors">
@@ -108,8 +68,6 @@
         </p>
         <br>
         <p class="footerMeta">© 2026 OSU Roller Hockey Club</p>
-        <br>
-        <p class="footerMeta">Website: [yourwebsite.com] | Contact: [contact@email.com]</p>
     </div>
 </body>
 </html>
