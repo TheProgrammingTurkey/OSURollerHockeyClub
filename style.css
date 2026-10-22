@@ -122,36 +122,62 @@ p{
 }
 #teamContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr));
+    gap: 16px;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 16px;
+    box-sizing: border-box;
+    justify-content: center;
 }
 .player{
-    display: inline-flex;
-    width: 80%;
-    margin: 30px;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: stretch;
+    gap: 12px;
+    min-width: 0;
+}
+.playerImage{
+    min-width: 0;
 }
 .player img{
-    width: 200px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border: 5px solid #333;
     border-radius: 10%;
+    box-sizing: border-box;
 }
 .playerInfo{
     display: flex;
     flex-direction: column;
-    justify-content: top;
-    align-items: left;
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-start;
+    align-items: stretch;
     text-align: left;
-    padding-left: 20px;
 }
 .playerName{
-    font-size: 24px;
+    font-size: clamp(18px, 1.8vw, 24px);
     font-weight: bold;
 }
 .playerPosition{
-    font-size: 20px;
+    font-size: clamp(16px, 1.5vw, 20px);
+}
+.playerLeadership{
+    font-size: clamp(13px, 1vw, 14px);
+    line-height: 1.2;
+    min-height: 1.2em;
+    font-weight: 600;
+}
+.playerWithoutLeadership .playerInfo::after{
+    content: "";
+    flex: 0 0 calc(clamp(13px, 1vw, 14px) * 1.2 + 20px);
 }
 .playerBio{
-    font-size: 14px;
+    font-size: clamp(13px, 1vw, 14px);
     text-align: left;
 }
 .playerInfo div{
@@ -267,6 +293,9 @@ p{
 }
 
 @media (max-width: 1000px) {
+    #teamContainer{
+        grid-template-columns: 1fr;
+    }
     h1{
         font-size: 24px;
     }
@@ -290,6 +319,35 @@ p{
 }
 
 @media (max-width: 600px) {
+    #teamContainer{
+        gap: 12px;
+        padding: 10px;
+    }
+    .player{
+        grid-template-columns: clamp(76px, 26vw, 120px) minmax(0, 1fr);
+        gap: 8px;
+    }
+    .player img{
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+    .playerInfo div{
+        padding: 6px;
+    }
+    .playerWithoutLeadership .playerInfo::after{
+        flex-basis: calc(clamp(11px, 3vw, 13px) * 1.2 + 12px);
+    }
+    .playerName{
+        font-size: clamp(16px, 4vw, 20px);
+    }
+    .playerPosition{
+        font-size: clamp(14px, 3.5vw, 18px);
+    }
+    .playerLeadership,
+    .playerBio{
+        font-size: clamp(11px, 3vw, 13px);
+    }
     h1{
         font-size: 18px;
     }
@@ -300,11 +358,22 @@ p{
     }
     #navbar{
         height: 50px;
-        font-size: 12px;
+        flex-wrap: nowrap;
+        justify-content: left;
+        padding: 0 6px;
+        font-size: clamp(10px, 2.5vw, 12px);
     }
     #navbar a,
     #navbar img,
     #navbar div{
-        margin-right: 20px;
+        margin-right: 10px;
+    }
+    #navbar img{
+        width: auto;
+        height: 32px;
+    }
+    #dropdown #dropbtn{
+        padding: 4px 3px;
+        font-size: inherit;
     }
 }

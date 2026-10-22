@@ -5,13 +5,12 @@ document.getElementById('fullScreenArrow').addEventListener('click', function() 
     });
 });
 
-
 function loadRoster(){
     const roster = [
 ['9/29/2026 16:34:25', 'Joshua', 'Tidd', 'Finance, Sport industry', 'Senior', 'Westerville, Ohio', '3', 'Forward', 'President', 'Columbus Blue Jackets', 'Josh Anderson'],
 ['9/27/2026 15:57:01', 'Tanner', 'Buck', 'Political Science', 'Senior', 'Toledo, Ohio', '4', 'Forward', 'Vice President', 'Detroit Red Wings', 'Pavel Datsyuk'], 
 ['9/27/2026 18:06:33', 'Mateo', 'Perales', 'Electrical Engineering', 'Junior', 'St. Louis, Missouri', '3', 'Defense', 'Fundraising', 'St Louis Blues', 'Nathan Walker'], 
-['9/27/2026 15:58:51', 'Cadyn', 'Cole', 'Accounting', 'Junior', 'Holland, Ohio', '3', 'Forward', 'Treasure','Detroit Red Wings', 'Pavel Datsyuk'], 
+['9/27/2026 15:58:51', 'Cadyn', 'Cole', 'Accounting', 'Junior', 'Holland, Ohio', '3', 'Forward', 'Treasurer','Detroit Red Wings', 'Pavel Datsyuk'], 
 ['9/29/2026 16:36:19', 'Yi Ting', 'Chiu', 'Pharmaceutical Science', 'Junior', 'Taipei, Taiwan','2', 'Goalie', 'Social Media Manager & Secretary', 'Columbus Blue Jackets', 'Zach Werenski'],
 ['9/29/2026 16:44:26', 'Will', 'Kapszukiewicz', 'Industrial & Systems Engineering', 'Junior', 'Toledo, Ohio', '2', 'Goalie', 'Risk Manager', 'Chicago Blackhawks', 'Spencer Knight'], 
 ['9/29/2026 16:46:09', 'Ryan', 'Surdek', 'Marketing, Sport Industry', 'Senior', 'Dallas, Texas', '4', 'Forward', 'Member', 'Dallas Stars', 'Miro Heiskanen'], 
@@ -46,6 +45,16 @@ function loadRoster(){
         playerPositionDiv.classList.add("playerPosition");
         playerPositionDiv.textContent = player[7];
         playerInfoDiv.appendChild(playerPositionDiv);
+        const hasLeadership = player[8] && player[8] !== "Member";
+        if (!hasLeadership) {
+            playerDiv.classList.add("playerWithoutLeadership");
+        }
+        if (hasLeadership) {
+            const playerLeadershipDiv = document.createElement("div");
+            playerLeadershipDiv.classList.add("playerLeadership");
+            playerLeadershipDiv.textContent = player[8];
+            playerInfoDiv.appendChild(playerLeadershipDiv);
+        }
         const playerBioDiv = document.createElement("div");
         playerBioDiv.classList.add("playerBio");
         if(player[7] == "Coach"){
