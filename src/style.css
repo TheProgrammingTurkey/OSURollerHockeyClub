@@ -97,8 +97,7 @@ body{
 .homeScreenImage{
     position: absolute;
     z-index: -1;
-    width: min(12vw, 15vh);
-    max-width: 150px;
+    width: min(20vw, 25vh);
     border: 5px solid #333;
     border-radius: 10%;
 }
@@ -292,6 +291,9 @@ p{
 }
 
 @media (max-width: 1000px) {
+    .homeScreenImage{
+        width: min(16vw, 25vh);
+    }
     #teamContainer{
         grid-template-columns: 1fr;
     }

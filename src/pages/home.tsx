@@ -1,4 +1,8 @@
-import osuLogo from '../assets/osuLogo.png'
+import osuLogo from '../assets/osuLogo.png';
+import home1 from '../assets/home1.jpeg';
+import home2 from '../assets/home2.jpeg';
+import home3 from '../assets/home3.jpeg';
+import home4 from '../assets/home4.jpeg';
 
 export default function Home() {
     return (
@@ -11,10 +15,10 @@ export default function Home() {
                         document.getElementById('mainSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
                     }
                 }}></i>
-                    {/* <img className="homeScreenImage" src="/assets/noImage.png" style={{transform: 'rotate(20deg)',  right: '8%', top: '5%'}} />
-                    <img className="homeScreenImage" src="/assets/noImage.png" style={{transform: 'rotate(-15deg)',  left: '8%', top: '15%'}} />
-                    <img className="homeScreenImage" src="/assets/noImage.png" style={{transform: 'rotate(10deg)',  right: '8%', top: '55%'}} />
-                    <img className="homeScreenImage" src="/assets/noImage.png" style={{transform: 'rotate(-5deg)',  left: '8%', top: '65%'}} /> */}
+                <img className="homeScreenImage" src={home1} style={{transform: 'rotate(20deg)',  right: '8%', top: '10%'}} />
+                <img className="homeScreenImage" src={home2} style={{transform: 'rotate(-15deg)',  left: '8%', top: '20%'}} />
+                <img className="homeScreenImage" src={home3} style={{transform: 'rotate(10deg)',  right: '8%', top: '55%'}} />
+                <img className="homeScreenImage" src={home4} style={{transform: 'rotate(-5deg)',  left: '8%', top: '65%'}} />
             </div>
             <div id="mainSection">
                 <h2>About</h2>
